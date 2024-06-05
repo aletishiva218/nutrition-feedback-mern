@@ -6,7 +6,7 @@ const addUser = async (req,res) => {
         username:req.body.username,
         useremail:req.body.useremail
     }
-    const userExists = await userModel.findOne({useremail:useremail})
+    const userExists = await userModel.findOne({useremail:userData.useremail})
     if(!userExists) 
     await userModel.create(userData)
     res.status(200).json({status:true,message:"user added successfully"})

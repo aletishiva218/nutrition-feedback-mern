@@ -7,7 +7,7 @@ const addUserMiddleware = {
         if(!username) errors.username="username is required";
         if(!useremail) errors.useremail="useremail is required";
 
-        if(!(username && useremail && userpassword))
+        if(!(username && useremail))
             return res.status(404).json({status:false,message:errors})
         next()
     },
