@@ -6,39 +6,37 @@ const attemptQuestion = async (req,res) => {
     const userExists = await userModel.findOne({useremail:useremail});
     if(!userExists)
          return res.status(404).json({status:false,message:"user does not exists"})
-    const attemptQuestion={
-        nutrition:{
-        }
-    }
+
+    const nutrition=userExists.nutrition;
 
     if(carbohydrates!=undefined)
-        attemptQuestion.nutrition.carbohydrates=carbohydrates;
+        nutrition.carbohydrates=carbohydrates;
     if(proteins!=undefined)
-        attemptQuestion.nutrition.proteins=proteins;
+        nutrition.proteins=proteins;
     if(fats!=undefined)
-        attemptQuestion.nutrition.fats=fats;
+        nutrition.fats=fats;
     if(calcium!=undefined)
-        attemptQuestion.nutrition.calcium=calcium;
+        nutrition.calcium=calcium;
     if(fiber!=undefined)
-        attemptQuestion.nutrition.fiber=fiber;
+        nutrition.fiber=fiber;
     if(sodium_chloride!=undefined)
-        attemptQuestion.nutrition.sodium_chloride=sodium_chloride;
+        nutrition.sodium_chloride=sodium_chloride;
     if(sucralose!=undefined)
-        attemptQuestion.nutrition.sucralose=sucralose;
+        nutrition.sucralose=sucralose;
     if(sucrose!=undefined)
-        attemptQuestion.nutrition.sucrose=sucrose;
+        nutrition.sucrose=sucrose;
     if(acesulfame_potassium!=undefined)
-        attemptQuestion.nutrition.acesulfame_potassium=acesulfame_potassium;
+        nutrition.acesulfame_potassium=acesulfame_potassium;
     if(monosodium_glutamate!=undefined)
-        attemptQuestion.nutrition.monosodium_glutamate=monosodium_glutamate;
+        nutrition.monosodium_glutamate=monosodium_glutamate;
     if(corn_syrup!=undefined)
-        attemptQuestion.nutrition.corn_syrup=corn_syrup;
+        nutrition.corn_syrup=corn_syrup;
     if(dextrose!=undefined)
-        attemptQuestion.nutrition.dextrose=dextrose;
+       nutrition.dextrose=dextrose;
     if(mannitol!=undefined)
-        attemptQuestion.nutrition.mannitol=mannitol;
+        nutrition.mannitol=mannitol;
     if(honey!=undefined)
-        attemptQuestion.nutrition.honey=honey;
+       nutrition.honey=honey;
     
     if(req.body.opinion)
         {
@@ -48,7 +46,7 @@ const attemptQuestion = async (req,res) => {
                 message:"saved"
             })
         }
-    await userModel.updateOne({useremail:useremail},{$set:attemptQuestion})
+    await userModel.updateOne({useremail:useremail},{$set:{nutrition:nutrition}})
     res.json({
         status:true,
         message:"updated"
