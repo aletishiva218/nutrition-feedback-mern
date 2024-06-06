@@ -8,7 +8,6 @@ const attemptQuestion = async (req,res) => {
          return res.status(404).json({status:false,message:"user does not exists"})
 
     const nutrition=userExists.nutrition;
-
     if(carbohydrates!=undefined)
         nutrition.carbohydrates=carbohydrates;
     if(proteins!=undefined)

@@ -6,7 +6,7 @@ const addUser = async (req,res) => {
         username:req.body.username,
         useremail:req.body.useremail,
         nutrition:{
-            
+            proteins:"Not Mentioned"
         }
     }
     const userExists = await userModel.findOne({useremail:userData.useremail})
