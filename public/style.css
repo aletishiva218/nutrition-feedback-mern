@@ -1,0 +1,301 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+    background-color: #f0f4f9;
+}
+
+
+
+.nav-brand {
+
+    width: 200px;
+    height: 100%;
+
+}
+
+.nav-brand img {
+    padding-top: 5px;
+    margin-left: 10px;
+    width: 45px;
+    height: 45px;
+
+
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to right, #f5cb8c, #ffffff);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 50px);
+
+}
+
+.main-container {
+    width: 80%;
+
+    background-color: #ffffff;
+
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 40px;
+
+    gap: 90px;
+
+}
+
+.question-container {
+    width: 50%;
+    height: 30rem;
+
+    position: relative;
+}
+
+.question-container div {
+    padding-left: 17px;
+}
+
+.question-container img {
+
+    width: 100px;
+    height: 90px;
+    border-radius: 30px;
+}
+
+.question-container div h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    color: #290101;
+    margin-bottom: 10px;
+}
+
+.question-container div .subheading {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    color: #8f8282;
+    margin-bottom: 10px;
+}
+
+
+.bottom-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: #d2d2d2;
+    font-size: 14px;
+}
+
+/* ////////////////////////////////////////// */
+/* nutrients javascript use from here */
+
+.test-container {
+    width: 50%;
+}
+
+.spinner{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%) !important;
+}
+
+
+.test h1 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    text-align: end;
+    color: #290101;
+    margin-bottom: 10px;
+}
+
+.subheading-1 {
+    padding: 0;
+    text-align: end;
+}
+
+.question-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+
+    margin-top: 20px;
+
+
+}
+
+.question-frame .li-List {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.li-List div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.nutrients {
+    font-size: 40px;
+}
+
+
+.check-Box {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff6e8;
+    margin-bottom: 15px;
+}
+
+
+.chk-btn {
+    background-color: #f5cb8c;
+    accent-color: #290101;
+    cursor: pointer;
+}
+
+.btn-botton {
+    display: flex;
+
+    align-items: end;
+    justify-content: end;
+    gap: 20px;
+}
+
+.btn-botton .btn {
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fad59a;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-botton .btn:hover {
+    transform: translate(0px, -5px);
+}
+
+.btn-botton .btn.next:hover {
+    background-color: #f69a0f;
+}
+
+.btn-botton .next {
+    background-color: #f59d19;
+    color: #ffffff;
+}
+
+
+.textArea-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    margin: 20px 0px 20px 0px;
+}
+
+.text-opinion {
+    resize: none;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    color: #6d6d6d;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+
+}
+
+.text-opinion:focus {
+    border: 1px solid #f5cb8c;
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fade-in 1s ease-in;
+}
+
+
+/* user data frame */
+.user-data {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.user-data label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #290101;
+}
+
+.user-data input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #f5cb8c;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+}
+
+.user-data input:focus {
+    border: 1px solid #f5cb8c;
+}

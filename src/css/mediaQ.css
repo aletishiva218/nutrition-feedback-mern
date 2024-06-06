@@ -1,0 +1,158 @@
+/* @media only screen and (max-width: 600px) {
+    /* Styles for small screens */
+/* Adjust the display for small screens here */
+/* } */
+
+@media only screen and (max-width: 710px) {
+
+    .main-container {
+        margin-top: 50rem;
+    }
+
+    .question-container div h1 {
+        font-size: 30px;
+    }
+
+    .question-container div .subheading {
+        font-size: 14px;
+        color: #fcfcfc;
+        font-weight: 500;
+    }
+
+    .bottom-text {
+        color: #a27700;
+
+    }
+}
+
+@media only screen and (max-width: 988px) {
+
+    /* Styles for medium screens */
+    /* Adjust the display for medium screens here */
+    .main-container {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 14rem;
+
+
+
+    }
+
+    .question-container {
+        background-color: #f5cb8c;
+        width: 100%;
+        height: 20rem;
+        padding: 17px;
+        border-radius: 10px 10px 0 0;
+    }
+
+
+
+    .test-container {
+        padding: 50px;
+        width: 100%;
+
+    }
+
+    .bottom-text {
+        color: white;
+        left: 20px;
+    }
+}
+
+
+
+@media only screen and (min-width: 1441px) {
+    /* Styles for extra large screens */
+
+    /* Adjust the display for extra large screens here */
+}
+
+/* 441 */
+/* 589 */
+@media only screen and (max-width: 589px) {
+    .main-container {
+        margin-top: 20rem;
+    }
+}
+
+@media only screen and (max-width: 441px) {
+    .main-container {
+        margin-top: 20rem;
+    }
+
+
+    .question-container {
+        height: 20rem;
+
+    }
+
+    .question-container div h1 {
+        /* font-size: 15px; */
+        font-size: 25px;
+        line-height: 1;
+    }
+
+}
+
+@media only screen and (max-width: 381px) {
+    header {
+        display: block;
+
+    }
+
+    .main-container {
+        margin-top: 22rem;
+        /* margin-top: 20rem; */
+        width: 95%;
+
+
+    }
+
+    .question-container {
+        padding: 10px;
+    }
+
+    .question-container div h1 {
+        /* font-size: 15px; */
+
+        line-height: 1.1;
+    }
+
+
+    .test-container {
+        padding: 20px;
+    }
+
+
+    .btn-botton {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .btn-botton button {
+        width: 100%;
+        margin-top: 10px;
+
+    }
+
+}
+
+@media only screen and (max-width: 239px) {
+    .main-container {
+        margin-right: 0;
+    }
+
+    .question-container {
+        padding: 6px;
+    }
+
+    .question-container div p {
+        font-size: 12px;
+    }
+
+    .question-container div h1 {
+        font-size: 20px;
+    }
+
+}
