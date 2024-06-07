@@ -6,6 +6,7 @@ dotenv.config()
 import users from "./route/users.js";
 import addUser from "./route/adduser.js";
 import attemptQuestion from "./route/attemptquestion.js";
+import user from "./route/user.js";
 import addUserMiddleware from "./route/middleware/addusermiddleware.js";
 
 
@@ -16,6 +17,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 app.get("/users",users)
+app.get("/user/:useremail",user)
 app.post("/user",addUserMiddleware.isAllDetails,addUserMiddleware.isCorrectDetails,addUser)
 app.put("/user/:useremail",attemptQuestion)
 
