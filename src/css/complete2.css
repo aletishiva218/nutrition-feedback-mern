@@ -287,7 +287,11 @@
 }
 
 .isred {
-    color: green;
+    color: red;
+}
+
+.main-container-expand .isred {
+    background-color: #f8d5f2;
 }
 
 .arrow-btn {

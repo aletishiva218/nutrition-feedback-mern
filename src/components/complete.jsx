@@ -71,12 +71,12 @@ const MaxWidthDialog =  (props) => {
                       <p>{answer.question}</p>
                       {/* user given answer */}
                       {/* use isred for wrong answer */}
-                      <p className="isgreen">{answer.given}</p>
+                      <p className={(answer.given==answer.correct)?"isgreen":"isred"}>{answer.given}</p>
                     </div>  
                     <div className="arrow-btn" onClick={()=>onToggle(ind)}>
                       <img src="logo/arrow.svg" alt="arrow" />
                     </div>
-                    <div className="main-container-expand isgreen"> 
+                    <div className={(answer.given==answer.correct)?"main-container-expand isgreen":"main-container-expand isred"}> 
                       <h1 className="statement">
                         This statement is <span className="primary-color-statement">{answer.correct}</span>
                       </h1>

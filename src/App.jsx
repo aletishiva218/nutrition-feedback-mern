@@ -25,7 +25,7 @@ const App = () => {
     // question11and12: false,
     // question13and14: false,
     opinion: false,
-    complete: true
+    complete: false
   });
 
   setTimeout(() => {
