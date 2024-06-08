@@ -4,6 +4,7 @@ import axios from "axios";
 
 const Opinion = (props) => {
   const { changePage } = props;
+  const [submitted,setSubmitted ] = useState(false);
   const useremail = Cookies.get("useremail")
 
   const [data,setData] = useState({opinion:""})
@@ -14,6 +15,7 @@ const Opinion = (props) => {
   }
 
   const submit =async (event) => {
+    setSubmitted(true);
     event.preventDefault()
     try{
       const response = await axios.put(`https://nutrition-feedback-api.vercel.app/user/${useremail}`,data)
@@ -58,7 +60,9 @@ const Opinion = (props) => {
             <div />
             <div className="btn-botton">
               {/* <button className="previous btn ">previous </button> */}
-              <button className="next btn" type="submit"> Next</button>
+              <div class="balls">{(submitted)?<Fragment><span class="ball-1"></span><span class="ball-2"></span></Fragment>:null}</div>
+              <div className="tot-pages"><span>1</span><span>2</span><span>3</span><span className="curr-page">4</span></div>
+              <button className="next btn" type="submit"> Submit</button>
             </div>
           </main>
         </form>

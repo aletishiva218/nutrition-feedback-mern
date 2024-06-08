@@ -5,6 +5,7 @@ import Spinner from "./Loading Component/Spinner";
 
 const User = (props) => {
   const { changePage } = props;
+  const [submitted,setSubmitted ] = useState(false);
   const [user, setUser] = useState({ username: "", useremail: "" });
 
   const onChange = (event) => {
@@ -19,6 +20,7 @@ const User = (props) => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    setSubmitted(true)
     try{
       const response = await axios.post("https://nutrition-feedback-api.vercel.app/user",user)
     }catch(err){
@@ -54,6 +56,7 @@ const User = (props) => {
           <form className="test-container" onSubmit={onSubmit}>
             <div className="test">
               <h1>Test your knowledge</h1>
+              <h1>Total Questions: 14</h1>
               <p className="subheading-1">
                 Take this quiz to test your knowledge on the nutrients
               </p>  
@@ -77,6 +80,7 @@ const User = (props) => {
             <main>
               <div />
               <div className="btn-botton">
+              <div class="balls">{(submitted)?<Fragment><span class="ball-1"></span><span class="ball-2"></span></Fragment>:null}</div>
                 <button className="next btn" type="submit">
                   {" "}
                   Next
