@@ -58,6 +58,35 @@ const user = async (req, res) => {
     honey:
       "The statement is True. Honey is indeed a natural sweetener produced by bees from flower nectar and has been traditionally used for its various medicinal properties, including its soothing effects on sore throats and coughs.",
   };
+  let questions = {
+    carbohydrates:
+      "Carbohydrates are useful for losing weight?",
+    proteins:
+      "Proteins are primarily responsible for causing weight gain since they are high in calories ?",
+    fats: "Eating fats always leads to weight gain since they are high in calories ?",
+    calcium:
+      "Eating foods high in calcium always leads to stronger bones and teeth ?",
+    fiber:
+      "Consuming foods rich in fiber always results in constipation ?",
+    sodium_chloride:
+      "  Sodium Chloride is essential for maintaining proper fluid balance in the body ?",
+    sucralose:
+      "Sucralose, often listed as E955, is a natural sweetener derived from plant sources ?",
+    sucrose:
+      "Sucrose, commonly known as table sugar, is a naturally occurring carbohydrate found in fruits and vegetables ?",
+    acesulfame_potassium:
+      "Acesulfame Potassium, commonly known as Acesulfame-K, is a natural sweetener derived from plant sources ?",
+    monosodium_glutamate:
+      "Monosodium Glutamate (MSG), often vilified for its alleged negative health effects, is a compound that occurs naturally in the human body ?",
+    corn_syrup:
+      "Corn Syrup, a common sweetener in processed foods, is derived from the starch of corn kernels through a process involving enzymatic hydrolysis ?",
+    dextrose:
+      "Dextrose, also known as glucose, is a type of sugar that is exclusively derived from animal sources ?",
+    mannitol:
+      "Mannitol, a sugar alcohol commonly used as a sweetener in sugar-free products, is naturally found in pineapples and olives ?",
+    honey:
+      "Honey is renowned for its natural medicinal properties ,soothing sore throats?",
+  };
   const {
     carbohydrates,
     proteins,
@@ -78,6 +107,7 @@ const user = async (req, res) => {
   if (carbohydrates != undefined) {
     answers.push({
       title: "Carbohydrates",
+      question:questions.carbohydrates,
       correct: correctanswers.carbohydrates,
       given: carbohydrates,
       description: descriptions.carbohydrates,
@@ -86,6 +116,7 @@ const user = async (req, res) => {
   if (proteins != undefined && proteins!="Not Mentioned") {
     answers.push({
       title: "Proteins",
+      question:questions.proteins,
       correct: correctanswers.proteins,
       given: proteins,
       description: descriptions.proteins,
@@ -94,6 +125,7 @@ const user = async (req, res) => {
   if (fats != undefined) {
     answers.push({
       title: "Fats",
+      question:questions.fats,
       correct: correctanswers.fats,
       given: fats,
       description: descriptions.fats,
@@ -102,6 +134,7 @@ const user = async (req, res) => {
   if (calcium != undefined) {
     answers.push({
       title: "Calcium",
+      question:questions.calcium,
       correct: correctanswers.calcium,
       given: calcium,
       description: descriptions.calcium,
@@ -110,6 +143,7 @@ const user = async (req, res) => {
   if (fiber != undefined) {
     answers.push({
       title: "Fiber",
+      question:questions.fiber,
       correct: correctanswers.fiber,
       given: fiber,
       description: descriptions.fiber,
@@ -118,6 +152,7 @@ const user = async (req, res) => {
   if (sodium_chloride != undefined) {
     answers.push({
       title: "Sodium Chloride",
+      question:questions.sodium_chloride,
       correct: correctanswers.sodium_chloride,
       given: sodium_chloride,
       description: descriptions.sodium_chloride,
@@ -126,6 +161,7 @@ const user = async (req, res) => {
   if (sucralose != undefined) {
     answers.push({
       title: "Sucralose",
+      question:questions.sucralose,
       correct: correctanswers.sucralose,
       given: sucralose,
       description: descriptions.sucralose,
@@ -134,6 +170,7 @@ const user = async (req, res) => {
   if (sucrose != undefined) {
     answers.push({
       title: "Sucrose",
+      question:questions.sucrose,
       correct: correctanswers.sucrose,
       given: sucrose,
       description: descriptions.sucrose,
@@ -142,6 +179,7 @@ const user = async (req, res) => {
   if (acesulfame_potassium != undefined) {
     answers.push({
       title: "Acesulfame Potassium",
+      question:questions.acesulfame_potassium,
       correct: correctanswers.acesulfame_potassium,
       given: acesulfame_potassium,
       description: descriptions.acesulfame_potassium,
@@ -150,6 +188,7 @@ const user = async (req, res) => {
   if (monosodium_glutamate != undefined) {
     answers.push({
       title: "Monosodium Glutamate",
+      question:questions.monosodium_glutamate,
       correct: correctanswers.monosodium_glutamate,
       given: monosodium_glutamate,
       description: descriptions.monosodium_glutamate,
@@ -158,6 +197,7 @@ const user = async (req, res) => {
   if (corn_syrup != undefined) {
     answers.push({
       title: "Corn Syrup",
+      question:questions.corn_syrup,
       correct: correctanswers.corn_syrup,
       given: corn_syrup,
       description: descriptions.corn_syrup,
@@ -166,6 +206,7 @@ const user = async (req, res) => {
   if (dextrose != undefined) {
     answers.push({
       title: "Dextrose",
+      question:questions.dextrose,
       correct: correctanswers.dextrose,
       given: dextrose,
       description: descriptions.dextrose,
@@ -174,6 +215,7 @@ const user = async (req, res) => {
   if (mannitol != undefined) {
     answers.push({
       title: "Mannitol",
+      question:questions.mannitol,
       correct: correctanswers.mannitol,
       given: mannitol,
       description: descriptions.mannitol,
@@ -182,6 +224,7 @@ const user = async (req, res) => {
   if (honey != undefined) {
     answers.push({
       title: "Honey",
+      question:questions.honey,
       correct: correctanswers.honey,
       given: honey,
       description: descriptions.honey,
