@@ -9,8 +9,6 @@ import attemptQuestion from "./route/attemptquestion.js";
 import user from "./route/user.js";
 import addUserMiddleware from "./route/middleware/addusermiddleware.js";
 
-// nothing
-
 const app = express()
 const port = process.env.PORT;
 app.use(cors())
